@@ -1,0 +1,459 @@
+/*Обнуление*/
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+main{
+    width: 1440px;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h5{
+  font-family: "DM Serif Display", serif;
+}
+nav{
+    width: 1200px;
+    height: 65px;
+    margin: 25px auto;
+    display:flex;
+    justify-content: space-between;
+}
+
+.menu li{
+    display: inline-block;
+    margin-left: 2em;
+}
+
+.menu li:hover{
+    color: #CDA274;
+}
+
+header{
+    width: 100%;
+    height: 830px;
+    border-bottom-left-radius: 290px;
+    background-image: url(../img/4c317bff847c23792d07d9fee1ddb4fa.jpg);
+    background-repeat: no-repeat;      /* чтобы не повторялась */
+    background-size: cover;            /* чтобы растягивалась по всему элементу */
+    background-position: center center;/* чтобы была по центру */
+    border: 1px solid black;
+}
+
+.offer{
+    padding-top: 195px;
+    padding-left: 120px;
+}
+h1{
+    font-size: 80px;
+}
+
+button{
+  width: 200px;
+  height: 70px;
+  background-color: #292F36;
+  color: white;
+  border-radius: 20px;
+  font-size: 18px;
+  letter-spacing: 0.72px;
+  margin-top: 35px ;
+}
+
+.details{
+width: 1200px;
+height: 395px;
+margin:  100px auto;
+display:flex;
+}
+
+.detail dic{
+  padding:  42px;
+  line-height: 33px;
+}
+
+.details div a{
+  display: block;
+  padding-top: 40px;
+  text-decoration: none;
+  color: #4D5053;
+}
+
+.contacts{
+  width: 1200px;
+  height: 650px;
+  margin: aouto;
+  display: flex;
+}
+
+.contacts-img img{
+  border-bottom-left-radius: 123px;
+  border-top-right-radius: 326px;
+}
+
+.contacts .text{
+  width: 60%;
+  padding-top: 150px;
+}
+
+.contacts .text h2{
+  font-size: 50px;
+  letter-spacing: 0.22px;
+  line-height: 65px;
+}
+
+.feedback{
+  width: 1200px;
+  height: 675px;
+  background-color: #F4F0EC;
+  border-radius: 70px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.feedback h2{
+  text-align: center;
+  font-size: 45px;
+  letter-spacing: 0.22px;
+  line-height: 60px;
+  margin-bottom: 50px;
+}
+
+.items{
+  display: flex;
+  justify-content: space-around;
+}
+
+.item{
+  width: 30%;
+  background-color: white;
+  border-radius: 30px;
+  padding: 45px;
+}
+
+.brand{
+  width: 80%;
+  height: 100px;
+  margin: 140px auto;
+}
+
+.project{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.project-items{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  text-align: left;
+  margin-top: 50px;
+}
+
+.project-item img{
+   border-top-right-radius: 80px;
+}
+
+.project-item button{
+  background-color: #F4F0EC;
+  color: #292F36;
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  border: none;
+  position: relative;
+  top: -80px;
+  left: 85%;
+  z-index: 1000;
+}
+
+.numbers{
+  width: 100%;
+  height: 475px;
+  background-color: #F4F0EC;
+  padding: 140px;
+  display: flex;
+  justify-content: center;
+}
+
+.number-color{
+  color: #CDA274;
+  font-size: 85px;
+  font-weight: bolder;
+}
+
+.number{
+  text-align: center;
+  width: 290px;
+  height: 195px;
+  border-right: 1px solid #CDA274;
+}
+
+.blog{
+  margin: 120px;
+}
+
+.blog h2, p{
+  text-align: center;
+}
+
+.blog-items{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-top: 70px;
+}
+
+.blog-item{
+  border: #4D5053 solid 1px;
+  border-radius: 45px;
+  padding: 20px;
+  margin: 20px;
+  height: 300px;
+}
+
+.blog-item-img{
+  width: 100%;
+  height:  70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-bottom-left-radius: 45px;
+}
+
+.one{
+  background-image: url(../img/blog1.jpg);
+}
+
+.two{
+  background-image: url(../img/blog2.jpg);
+}
+
+.three{
+  background-image: url(../img/blog3.jpg);
+}
+
+.four{
+  background-image: url(../img/blog4.jpg);
+}
+
+.five{
+  background-image: url(../img/blog5.jpg);
+}
+
+.six{
+  background-image: url(../img/blog6.jpg);
+}
+
+.blog-item button{
+  background-color: #F4F0EC;
+  color: #292F36;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  border: none;
+  position: relative;
+  top: -80px;
+  left: 80%;
+  z-index: 1000;
+}
+
+.blog-item-img-btn{
+  background-color: ;
+  padding: 10px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  width: 125px;
+}
+
+#join{
+  width: 83%;
+  height: 400px;
+  background-color: #292F36;
+  padding-top: 100px;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  border-radius: 70px;
+}
+
+#join button{
+  background-color: #CDA274;
+}
+
+footer{
+  width: 100%;
+  height: 105px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+@media all and (max-width: 1024px){
+  main{
+    width: 100%;
+  }
+
+  nav{
+    width: 95%;
+    justify-content: flec-start;
+  }
+
+  .details{
+    width: 95%;
+    height: auto;
+  }
+  
+  .contacts .text{
+    width: 40%;
+    padding-top: 100px;
+  }
+
+  .feedback{
+    width: 95%;
+    margin-top: 20px;
+  }
+
+  .blog-items{
+     grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 460px) {
+  main {
+    width: 460px;
+  }
+
+  .offer {
+    padding: 50px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  header {
+    width: 460px;
+    height: auto;
+    text-align: center;
+  }
+  .details{
+    flex-direction: colum;
+    height: auto;
+  }
+
+   .contacts .text{
+    width: 100%;
+    text-align: center;
+  }
+
+.contacts-img{
+    display: none;
+  }
+
+  .feedback{
+    height: auto;
+  }
+
+  .items{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .item{
+    width: 100%;
+  }
+
+  .brand{
+    display: none;
+  }
+
+ .number-color{
+    font-size: 40px;
+  }
+
+ .blog-item{
+    padding: 0;
+    margin: 10px auto;
+    width: 95%;
+  }
+
+  .blog{
+    margin: 50px auto;
+  }
+}
